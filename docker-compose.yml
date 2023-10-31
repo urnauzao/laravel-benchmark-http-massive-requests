@@ -19,11 +19,15 @@ services:
             IGNITION_LOCAL_SITES_PATH: '${PWD}'
         volumes:
             - '.:/var/www/html'
+            - './docker/8.2/supervisord.conf:/etc/supervisor/conf.d/supervisord.conf'
         networks:
             - sail
         depends_on:
             - pgsql
             - redis
+        mem_limit: 1024m # Restringe o uso de memória a 1024 megabytes (1Gb)
+        cpus: 2 # Restringe a utilização de CPU a 2 núcleos
+
     pgsql:
         image: 'postgres:15'
         ports:

@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "98ffb2a1-28c8-467c-9c78-0ced869e8003",
+		"name": "Laravel Benchmark Requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10823722",
+		"_collection_link": "https://www.postman.com/urnau-team/workspace/team-urnau-workspace/collection/10823722-98ffb2a1-28c8-467c-9c78-0ced869e8003?action=share&source=collection_link&creator=10823722"
+	},
+	"item": [
+		{
+			"name": "Test All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/benchmark?mode=default&endpoints=120&try=3",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"benchmark"
+					],
+					"query": [
+						{
+							"key": "mode",
+							"value": "default"
+						},
+						{
+							"key": "endpoints",
+							"value": "120"
+						},
+						{
+							"key": "try",
+							"value": "3"
+						},
+						{
+							"key": "disable-octane",
+							"value": "true",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Http Laravel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/benchmark?mode=httpLaravel&endpoints=5&try=1",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"benchmark"
+					],
+					"query": [
+						{
+							"key": "mode",
+							"value": "httpLaravel"
+						},
+						{
+							"key": "endpoints",
+							"value": "5"
+						},
+						{
+							"key": "try",
+							"value": "1"
+						},
+						{
+							"key": "disable-octane",
+							"value": "true",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Multi Http Pool Octane",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/benchmark?mode=multiHttpPoolOctane&endpoints=100&try=3",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"benchmark"
+					],
+					"query": [
+						{
+							"key": "mode",
+							"value": "multiHttpPoolOctane"
+						},
+						{
+							"key": "endpoints",
+							"value": "100"
+						},
+						{
+							"key": "try",
+							"value": "3"
+						},
+						{
+							"key": "disable-octane",
+							"value": "true",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Http Chunked Octane",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/benchmark?mode=httpChunkedOctane&endpoints=1000&try=1",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"benchmark"
+					],
+					"query": [
+						{
+							"key": "mode",
+							"value": "httpChunkedOctane"
+						},
+						{
+							"key": "endpoints",
+							"value": "1000"
+						},
+						{
+							"key": "try",
+							"value": "1"
+						},
+						{
+							"key": "disable-octane",
+							"value": "true",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
